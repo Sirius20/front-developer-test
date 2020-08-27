@@ -50,9 +50,11 @@
     "webpack-md5-hash": "0.0.6"
   },
   "dependencies": {
+    "-": "0.0.1",
     "animate.css": "^4.1.0",
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.5.0",
+    "ci": "^1.0.0",
     "core-js": "^3.6.5",
     "jquery": "^3.5.1",
     "popper.js": "^1.16.1",
@@ -66,7 +68,8 @@
   "scripts": {
     "dev": "webpack-dev-server --mode development --open",
     "integration": "webpack --mode development",
-    "prod": "webpack --mode production"
+    "prod": "webpack --mode production",
+    "build" : "webpack"
   },
   "keywords": [],
   "description": ""

@@ -29,7 +29,7 @@ const pluginsOptions = [
       {
         from: './src/img',
         to: './assets/img',
-      }
+      },
     ],
   }),
 ];
@@ -52,6 +52,10 @@ module.exports = (env, argv) => ({
     path: path.resolve(__dirname, 'dist'),
     filename: argv.mode === 'development' ? 'assets/js/[name].js' : 'assets/js/[name].[contenthash].js',
     publicPath: '/',
+  },
+  resolve: {
+    extensions: ['.jsx', '.js', '*'],
+    modules: [path.resolve(__dirname, 'src'), 'node_modules'],
   },
   devtool: 'source-map',
   module: {
@@ -180,6 +184,9 @@ module.exports = (env, argv) => ({
           ],
         },
       }),
+      new HtmlWebpackPlugin({
+        template: './src/index.pug',
+      }),
     ],
 
   },
@@ -211,5 +218,6 @@ module.exports = (env, argv) => ({
     watchContentBase: true,
     host: 'localhost',
     port: 9006,
+    open: true,
   },
 });

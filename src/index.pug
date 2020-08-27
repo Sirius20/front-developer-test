@@ -4,8 +4,38 @@ block title
   title Главная
 
 block contentBlock
-  .container
-    .row
-      .col-12
-          p Hello Developer!
+  .container.main
+    .row.first-row
+      .col.image
+        img(src="images/Rectangle_90.jpg", width="560px", height="579px")
+      .col.description
+        h2.h2_xl
+          |Эмоциональный
+          br
+          |дизайн интерьера
+        p Elements studio – команда амбициозных молодых профессиональных дизайнеров с тонким чувством стиля. Cоздаем современные интерьеры в которых удобно жить.
+        a.btn-info.btn-info_black ПОДРОБНЕЕ
 
+    .row.second-row
+      .col.description
+        h2 Дизайнерские решения
+        p.h2_xl Как вписать скандинавскую мебель в советский интерьер
+      .col
+        img(src="images/pict.png", width="614px", height="600px")
+  
+  .container-fluid.reviews
+    .row
+      .col-6
+        h2.h2_xl Отзывы клиентов
+        figure
+          figcaption 20 лет опыта
+          img(src="images/bg_photo.jpg", width="80px", height="80px", alt="avatar")
+        span.arrow-left
+        span.arrow-right
+        blockquote
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+          cite Маруся Иванова
+
+  .container.about-us
+    h2.h2_xl Наша команда
+    .row.about-us__row
